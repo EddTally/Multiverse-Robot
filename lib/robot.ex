@@ -51,10 +51,10 @@ defmodule MultiverseRobot do
 
 		<<pos_x::binary-size(1),pos_y::binary-size(1), direction::binary-size(1), movements::bitstring>>= input
 			%{
-			pos_x: pos_x,
-			pos_y: pos_y,
-			grid_max_x: grid_x,
-			grid_max_y: grid_y,
+			pos_x: String.to_integer(pos_x),
+			pos_y: String.to_integer(pos_y),
+			grid_max_x: String.to_integer(grid_x),
+			grid_max_y: String.to_integer(grid_y),
 			direction: direction,
 			movements: movements,
 			lost?: false
